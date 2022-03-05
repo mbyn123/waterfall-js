@@ -1,11 +1,11 @@
 // (function () {
 //     var waterfall = function (options) {
-//         const { rootEl, column, gap,childEl } = options
-//         this.el = document.getElementsByClassName(rootEl)[0]
+//         const { el, column, gap,child } = options
+//         this.el = document.getElementsByClassName(el)[0]
 //         this.column = column
 //         this.gap = gap
 //         this.itemWidth = (this.el.offsetWidth - (this.column - 1) * this.column) / this.column
-//         this.items = document.getElementsByClassName(childEl)
+//         this.items = document.getElementsByClassName(child)
 //         this.heightArr = []
 //         this.init()
 
@@ -44,8 +44,8 @@
 (function () {
     class waterfall {
         constructor(options) {
-            const { rootEl, column, gap, childEl } = options
-            this.el = document.getElementsByClassName(rootEl)[0]
+            const { el, column, gap, child } = options
+            this.el = document.getElementsByClassName(el)[0]
             this.column = column
             this.gap = gap
             // 当前最后-列图片的高度
@@ -53,7 +53,7 @@
             // 计算每张图片的宽度
             this.itemWidth = (this.el.offsetWidth - (this.column - 1) * this.gap) / this.column
             // 获取所有的图片Dom
-            this.items = document.getElementsByClassName(childEl)
+            this.items = document.getElementsByClassName(child)
             this.init()
         }
 
